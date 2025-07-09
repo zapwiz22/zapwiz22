@@ -1,103 +1,85 @@
 import Image from "next/image";
+import Link from "next/link";
+import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { SiCodeforces } from "react-icons/si";
+import PageTransition from "@/components/PageTransition";
+import Typing from "@/components/Typing";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <PageTransition>
+      <div className="h-full flex flex-col lg:flex-row-reverse px-4 sm:px-8 md:px-12 lg:px-16 xl:px-40">
+        {/* Top Half - Image */}
+        <div className="relative h-1/2 lg:h-full lg:w-1/2">
+          <Image src="/pfp.png" alt="ZapWiz" fill className="object-contain" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        {/* Bottom Half - Text + Animation */}
+        <div className="h-1/2 lg:h-full lg:w-1/2 text-white flex flex-col items-center justify-center text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            Hello
+            <span className="inline-block animate-wave origin-bottom-left ml-1">
+              <img
+                src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif"
+                alt="wave"
+                width="40px"
+                className="inline"
+              />
+            </span>
+          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            I'm <span className="text-cyan-400">Jayant Kumar</span>
+          </h1>
+
+          <Typing />
+
+          {/* Buttons */}
+          <div className="flex gap-4 mb-6">
+            <Link href="/portfolio">
+              <button className="bg-cyan-500 text-black px-4 py-2 rounded hover:bg-cyan-400 transition cursor-pointer">
+                View My Work
+              </button>
+            </Link>
+            <Link href="/contact">
+              <button className="bg-transparent border border-cyan-500 text-cyan-400 px-4 py-2 rounded cursor-pointer hover:bg-cyan-500 hover:text-black transition">
+                Contact Me
+              </button>
+            </Link>
+          </div>
+
+          {/* Social Links */}
+          <div className="flex gap-6 text-2xl text-gray-400">
+            <Link
+              href="https://github.com/zapwiz22"
+              target="_blank"
+              className="hover:text-white transition"
+            >
+              <FaGithub />
+            </Link>
+            <Link
+              href="https://linkedin.com/in/zapwiz22"
+              target="_blank"
+              className="hover:text-white transition"
+            >
+              <FaLinkedin />
+            </Link>
+            <Link
+              href="https://x.com/zapwiz22"
+              target="_blank"
+              className="hover:text-white transition"
+            >
+              <FaXTwitter />
+            </Link>
+            <Link
+              href="https://codeforces.com/profile/zapwiz22"
+              target="_blank"
+              className="hover:text-white transition"
+            >
+              <SiCodeforces />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </PageTransition>
   );
 }
