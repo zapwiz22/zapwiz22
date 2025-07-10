@@ -79,8 +79,8 @@ export default function Navbar() {
         <Image
           src="/zapwiz22.png"
           alt="ZapWiz22 Logo"
-          width={48}
-          height={48}
+          width={200}
+          height={200}
           className="transition duration-300 drop-shadow-lg group-hover:drop-shadow-[0_0_10px_#ffffffaa] group-hover:scale-105"
         />
       </Link>
