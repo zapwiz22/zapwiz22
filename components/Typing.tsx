@@ -7,11 +7,11 @@ export default function Typing() {
     <>
       <TypeAnimation
         sequence={[
-          "Full Stack Developer",
+          "A Full Stack Developer",
           2000,
-          "Competitive Programmer",
+          "A Competitive Programmer",
           2000,
-          "CTF Enthusiast",
+          "A CTF Enthusiast",
           2000,
         ]}
         wrapper="span"

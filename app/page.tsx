@@ -16,7 +16,7 @@ export default function Home() {
 
         {/* Bottom Half - Text + Animation */}
         <div className="h-1/2 lg:h-full lg:w-1/2 text-white flex flex-col items-center justify-center text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">
             Hello
             <span className="inline-block animate-wave origin-bottom-left ml-1">
               <img
@@ -27,11 +27,12 @@ export default function Home() {
               />
             </span>
           </h1>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">
             I'm <span className="text-cyan-400">Jayant Kumar</span>
           </h1>
 
           <Typing />
+
 
           {/* Buttons */}
           <div className="flex gap-4 mb-6">

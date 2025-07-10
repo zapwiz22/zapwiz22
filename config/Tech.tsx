@@ -1,4 +1,12 @@
-const technologies = [
+import React from "react";
+
+interface Skill {
+  name: string;
+  color: string;
+  icon: React.ReactElement;
+}
+
+const technologies: Skill[] = [
   {
     name: "Next.js",
     color: "#000000",
@@ -19,16 +27,11 @@ const technologies = [
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g
-          id="Page-1"
-          stroke="none"
-          fill="none"
-        >
+        <g id="Page-1" stroke="none" fill="none">
           <g
             id="Artboard-Copy-7"
             transform="translate(-227, -256)"
             fill="#58C4DC"
-            fill-rule="nonzero"
           >
             <g id="React-Logo-Filled-(1)" transform="translate(227, 256)">
               <path

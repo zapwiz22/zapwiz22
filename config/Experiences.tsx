@@ -1,8 +1,17 @@
-const experiences = [
+interface Experience {
+  title: string;
+  company: string;
+  year: number;
+  location: string;
+  description: string;
+  skills: string[];
+}
+
+const experiences: Experience[] = [
   {
     title: "Core Team Member - SDG",
     company: "COPS IIT BHU",
-    year: "2025",
+    year: 2025,
     location: "Onsite",
     description:
       "Selected to work in the Software Development Guild of the Club of Programmers, IIT BHU.",
