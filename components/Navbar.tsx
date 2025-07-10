@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
@@ -75,14 +76,13 @@ export default function Navbar() {
     <nav className="relative h-24 flex items-center justify-between px-4 sm:px-8 md:px-12 lg:px-16 xl:px-40 bg-transparent">
       {/* Logo */}
       <Link href="/" className="group text-xl transition duration-300">
-        <pre className="text-white font-mono text-sm leading-none transition duration-300 drop-shadow-lg group-hover:drop-shadow-[0_0_10px_#ffffffaa]">
-          {`
-▄▖       ▘▄▖▄▖▄▖
-▗▘▀▌▛▌▌▌▌▌▗▘▄▌▄▌
-▙▖█▌▙▌▚▚▘▌▙▖▙▖▙▖
-    ▌           
-`}
-        </pre>
+        <Image
+          src="/zapwiz22.png"
+          alt="ZapWiz22 Logo"
+          width={48}
+          height={48}
+          className="transition duration-300 drop-shadow-lg group-hover:drop-shadow-[0_0_10px_#ffffffaa] group-hover:scale-105"
+        />
       </Link>
 
       {/* Desktop Links */}
