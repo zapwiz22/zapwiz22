@@ -123,7 +123,8 @@ export default function PortfolioPage() {
         </p>
         {/* Buttons */}
         <div className="flex gap-4 mb-6">
-          <Link href="/portfolio">
+          {/* add the link to the resume  */}
+          <Link href="/">
             <button className="bg-cyan-500 text-black px-4 py-2 rounded hover:bg-cyan-400 transition cursor-pointer">
               View Résumé
             </button>
