@@ -8,7 +8,7 @@ import Typing from "@/components/Typing";
 export default function Home() {
   return (
     <PageTransition>
-      <div className="h-full flex flex-col lg:flex-row-reverse px-4 sm:px-8 md:px-12 lg:px-16 xl:px-40">
+      <div className="min-h-full flex flex-col lg:flex-row-reverse px-4 sm:px-8 md:px-12 lg:px-16 xl:px-40">
         {/* Top Half - Image */}
         <div className="relative h-1/2 lg:h-full lg:w-1/2">
           <Image src="/pfp.png" alt="ZapWiz" fill className="object-contain" />
