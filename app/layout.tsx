@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={firaCode.className}>
-      <body className={`antialiased`}>
+      <body className={`antialiased bg-black`}>
         <TransitionProvider>{children}</TransitionProvider>
       </body>
     </html>

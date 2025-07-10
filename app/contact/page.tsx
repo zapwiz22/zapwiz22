@@ -49,9 +49,9 @@ export default function ContactPage() {
 
   return (
     <PageTransition>
-      <div className="min-h-full flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-16 xl:px-40 text-white py-12 gap-8">
+      <div className="h-full overflow-y-auto flex flex-col lg:flex-row px-4 sm:px-8 md:px-12 lg:px-16 xl:px-40 text-white py-6 lg:py-12 gap-6 lg:gap-8">
         {/* animation container */}
-        <div className="w-full lg:w-1/2 flex items-center justify-center text-4xl sm:text-5xl md:text-6xl text-center">
+        <div className="w-full lg:w-1/2 flex items-center justify-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center select-none">
           <div>
             {text.split("").map((letter, index) => (
               <motion.span
@@ -75,7 +75,7 @@ export default function ContactPage() {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="w-full lg:w-1/2 rounded-xl text-xl flex flex-col gap-8 p-12 justify-center bg-white/5 backdrop-blur-md border border-white/10 shadow-lg"
+          className="w-full lg:w-1/2 rounded-xl text-xl flex flex-col gap-6 lg:gap-8 p-6 lg:p-12 justify-center bg-white/5 backdrop-blur-md border border-white/10 shadow-lg"
         >
           <label className="text-cyan-400 font-semibold">
             Dear Jayant Kumar,

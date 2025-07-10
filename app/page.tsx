@@ -49,7 +49,7 @@ export default function Home() {
           </div>
 
           {/* Social Links */}
-          <div className="flex gap-6 text-2xl text-gray-400">
+          <div className="flex gap-6 text-2xl text-gray-400 mb-6">
             <Link
               href="https://github.com/zapwiz22"
               target="_blank"
