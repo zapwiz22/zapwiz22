@@ -111,7 +111,7 @@ export default function Navbar() {
       {/* Hamburger + Mobile Menu */}
       <div className="md:hidden">
         <button
-          className="w-10 h-8 flex flex-col justify-between cursor-pointer z-50"
+          className="w-10 h-8 flex flex-col justify-between cursor-pointer z-50 relative"
           onClick={() => setOpen(!open)}
         >
           <motion.div
@@ -138,24 +138,28 @@ export default function Navbar() {
           variants={listVariants}
           initial="closed"
           animate="opened"
-          className="fixed inset-0 bg-black text-white flex flex-col items-center justify-center gap-10 text-3xl z-40 transition-all duration-300"
+          className="absolute top-0 left-0 w-screen h-screen bg-black text-white flex flex-col items-center justify-center gap-10 text-3xl z-40 transition-all duration-300 px-4"
         >
-          {links.map((link) => (
-            <motion.div variants={listItemVariants} key={link.title}>
-              <Link
-                key={link.url}
-                href={link.url}
-                onClick={() => setOpen(false)}
-                className={`relative transition-all duration-300 px-2 cursor-pointer ${
-                  pathname === link.url
-                    ? "text-white drop-shadow-[0_0_6px_#ffffffcc] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px] after:bg-white after:scale-x-100 after:origin-left after:transition-transform after:duration-300"
-                    : "text-gray-300 hover:text-white after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px] after:bg-white after:scale-x-0 after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300"
-                }`}
-              >
-                {link.title}
-              </Link>
-            </motion.div>
-          ))}
+          {links.map((link) => {
+            const isActive = pathname === link.url;
+
+            return (
+              <motion.div variants={listItemVariants} key={link.title}>
+                <Link
+                  href={link.url}
+                  onClick={() => setOpen(false)}
+                  className={`relative px-1 transition-all duration-300 cursor-pointer
+              ${
+                isActive
+                  ? "text-white drop-shadow-[0_0_6px_#ffffffcc] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px] after:bg-white after:scale-x-100 after:origin-left after:transition-transform after:duration-300"
+                  : "text-gray-300 hover:text-white after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-full after:h-[2px] after:bg-white after:scale-x-0 after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300"
+              }`}
+                >
+                  {link.title}
+                </Link>
+              </motion.div>
+            );
+          })}
         </motion.div>
       )}
     </nav>

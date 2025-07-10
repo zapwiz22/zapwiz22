@@ -23,6 +23,9 @@ const firaCode = Fira_Code({
 export const metadata: Metadata = {
   title: "Jayant Kumar",
   description: "Portfolio Website of Jayant Kumar aka zapwiz22.",
+  icons: {
+    icon: "/favicon.png"
+  }
 };
 
 export default function RootLayout({

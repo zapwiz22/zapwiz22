@@ -32,3 +32,14 @@
   transform-origin: 70% 70%;
   display: inline-block;
 }
+
+/* Hide scrollbars globally but allow scrolling */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
