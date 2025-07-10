@@ -36,14 +36,14 @@ export default function AboutPage() {
                 About Me
               </h1>
               <p className="text-lg leading-relaxed text-gray-300">
-                Hello! I'm{" "}
+                Hello! I&apos;m{" "}
                 <span className="text-white font-semibold">Jayant Kumar</span>,
                 a second-year Computer Science Engineering student with a deep
                 interest in tech and a drive to keep learning.
               </p>
               <p className="text-lg leading-relaxed text-gray-300">
-                I recently explored modern web development, and I'm currently
-                diving into{" "}
+                I recently explored modern web development, and I&apos;m
+                currently diving into{" "}
                 <span className="text-white font-semibold">Next.js</span> and
                 building full-stack apps.
               </p>
@@ -183,7 +183,7 @@ export default function AboutPage() {
             className="text-center py-12 md:py-16 lg:pt-18 lg:pb-100"
           >
             <blockquote className="text-2xl font-light italic text-gray-300 max-w-3xl mx-auto">
-              "Learning never exhausts the mind"
+              &quot;Learning never exhausts the mind&quot;
             </blockquote>
             <cite className="text-cyan-400 text-lg mt-4 block">
               — Leonardo da Vinci

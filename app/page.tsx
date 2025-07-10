@@ -19,20 +19,20 @@ export default function Home() {
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
             Hello
             <span className="inline-block animate-wave origin-bottom-left ml-1">
-              <img
+              <Image
                 src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif"
                 alt="wave"
-                width="40px"
+                width={40}
+                height={40}
                 className="inline"
               />
             </span>
           </h1>
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
-            I'm <span className="text-cyan-400">Jayant Kumar</span>
+            I&apos;m <span className="text-cyan-400">Jayant Kumar</span>
           </h1>
 
           <Typing />
-
 
           {/* Buttons */}
           <div className="flex gap-4 mb-6">

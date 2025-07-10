@@ -10,7 +10,7 @@ export default function ContactPage() {
 
   const form = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (e: any) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(false);
     setSuccess(false);
