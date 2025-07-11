@@ -10,16 +10,22 @@ export default function ContactPage() {
 
   const form = useRef<HTMLFormElement>(null);
 
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(false);
     setSuccess(false);
+    setLoading(true);
 
     const email = form.current?.user_email.value.trim();
     const message = form.current?.user_message.value.trim();
 
     if (!email || !message) {
       setError(true);
+      setLoading(false);
       return;
     }
 
@@ -41,11 +47,9 @@ export default function ContactPage() {
           console.log("FAILED...", error.text);
           setError(true);
         }
-      );
+      )
+      .finally(() => setLoading(false));
   };
-
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(false);
 
   return (
     <PageTransition>
@@ -101,9 +105,10 @@ export default function ContactPage() {
 
           <button
             type="submit"
+            disabled={loading}
             className="mt-2 bg-cyan-500 text-black px-4 py-2 rounded hover:bg-cyan-400 transition cursor-pointer font-semibold"
           >
-            Send
+            {loading ? "Sending..." : "Send"}
           </button>
           {success && (
             <span className="text-green-600 font-semibold">
