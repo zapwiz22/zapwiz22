@@ -32,11 +32,11 @@ export default function PortfolioPage() {
         </div>
         <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
           <motion.div style={{ x }} className="flex">
-            <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-black" />
+            <div className="h-screen w-screen flex items-center justify-center bg-black" />
             {items.map((item, index) => (
               // each project
               <div
-                className="h-screen w-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-black px-8 lg:px-16"
+                className="h-screen w-screen flex items-center justify-center bg-gradient-to-t from-gray-900 to-black px-8 lg:px-16"
                 key={index}
               >
                 <motion.div
@@ -109,7 +109,7 @@ export default function PortfolioPage() {
           </motion.div>
         </div>
       </div>
-      <div className="h-screen w-screen flex flex-col gap-6 p-6 items-center justify-center text-center bg-gradient-to-b from-gray-900 to-black">
+      <div className="h-screen w-screen flex flex-col gap-6 p-6 items-center justify-center text-center bg-black">
         {/* description*/}
         <p className="mb-6 drop-shadow-[0_0_10px_#ffffffaa] text-white font-medium md:text-lg hover:drop-shadow-[0_0_20px_#ffffffcc] transition-all duration-300">
           Building fast, scalable web apps.
@@ -124,7 +124,7 @@ export default function PortfolioPage() {
         {/* Buttons */}
         <div className="flex gap-4 mb-6">
           {/* add the link to the resume  */}
-          <Link href="/">
+          <Link href="https://www.canva.com/design/DAGq4ksGTCo/7ZodcIGF4tAYivjctqZRdw/view?utm_content=DAGq4ksGTCo&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hbe0b0e8f60">
             <button className="bg-cyan-500 text-black px-4 py-2 rounded hover:bg-cyan-400 transition cursor-pointer">
               View Résumé
             </button>

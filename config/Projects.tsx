@@ -9,6 +9,14 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "BeatMeUp",
+    desc: "A modern, real-time leaderboard web app for a ZType-inspired typing game. Built as a showcase project for the Induction Program 2025 IIT-BHU.",
+    img: "/projects/beatmeup.png",
+    liveLink: "https://beat-me-up-mauve.vercel.app/",
+    githubLink: "https://github.com/zapwiz22/BeatMeUp",
+    skills: ["Next.js", "Prisma", "TailwindCSS"],
+  },
+  {
     title: "Campus Cart",
     desc: "A secure campus-only marketplace for students to buy and sell items within their institute community. Built as the final project of CSOC Week'25.",
     img: "/projects/campuscart.png",

@@ -44,7 +44,7 @@ export default function AboutPage() {
               <p className="text-lg leading-relaxed text-gray-300">
                 I recently explored modern web development, and I&apos;m
                 currently diving into{" "}
-                <span className="text-white font-semibold">Next.js</span> and
+                <span className="text-white font-semibold">Rust</span> and
                 building full-stack apps.
               </p>
               <p className="text-lg leading-relaxed text-gray-300">
