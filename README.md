@@ -1,13 +1,15 @@
 # Hello 👋 I'm Jayant Kumar
 
+  <!-- 
 <div align="center">
   
-  ![Profile Views](https://komarev.com/ghpvc/?username=zapwiz22&color=00d9ff&style=flat-square)
+![Profile Views](https://komarev.com/ghpvc/?username=zapwiz22&color=00d9ff&style=flat-square)
   [![GitHub followers](https://img.shields.io/github/followers/zapwiz22?style=flat-square&color=00d9ff)](https://github.com/zapwiz22)
   
 </div>
 
 ---
+-->
 
 ## 🚀 About Me
 
