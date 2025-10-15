@@ -16,7 +16,7 @@
 I'm a **passionate Computer Science student** at **IIT BHU**, driven by curiosity in **development**, **competitive programming** and **CTFs**. I love building creative, performant, and user-focused projects.
 
 - 🔭 Currently working on **full-stack web applications**
-- 🌱 Learning **advanced algorithms** and **golang**
+- 🌱 Learning **advanced algorithms**
 - 🎯 Building fast, scalable web apps
 - 🧠 Driven by curiosity
 - ⚡ Sharpened by CTFs & CP
